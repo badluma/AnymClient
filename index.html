@@ -7,23 +7,31 @@
     <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
-    <!--Log-->
-    <pre id="log"></pre>
-
-    <div style="display: flex; gap: 0.5em">
-        <!--Labels-->
-        <div>
-            <label for="message">Message:</label><br>
-            <label for="name">Username:</label><br>
-            <label for="token">Token:</label>
+    <!--Templates-->
+    <template id="message-template">
+        <div class="message">
+            <b class="msg-name"></b>:
+            <span class="msg-text"></span>
         </div>
+    </template>
+    <template id="system-template">
+        <div class="system"><span class="msg-text"></span></div>
+    </template>
 
-        <!--Inputs-->
-        <div>
-            <input id="message" autofocus><br>
-            <input id="name"><br>
-            <input id="token" type="password">
-        </div>
+
+    <!--Messages-->
+    <div id="messages"></div>
+
+    <!--Credentials-->
+    <div class="credentials">
+        <input id="name" placeholder="Username">
+        <input id="token" type="password" placeholder="Token">
+    </div>
+
+    <!--Message Input-->
+    <div class="message-bar">
+        <input id="message-input" class="message-input" autofocus>
+        <button id="send" class="send">↑</button>
     </div>
 
     <script type="module" src="./src/main.ts"></script>
