@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anym</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!--Log-->
+    <pre id="log"></pre>
+
+    <div style="display: flex; gap: 0.5em">
+        <!--Labels-->
+        <div>
+            <label for="message">Message:</label><br>
+            <label for="name">Username:</label><br>
+            <label for="token">Token:</label>
+        </div>
+
+        <!--Inputs-->
+        <div>
+            <input id="message" autofocus><br>
+            <input id="name"><br>
+            <input id="token" type="password">
+        </div>
+    </div>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
